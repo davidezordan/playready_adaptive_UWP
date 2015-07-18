@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|AnyCPU">
@@ -49,9 +49,7 @@
     <TargetPlatformMinVersion>10.0.10069.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>$(VersionNumberMajor).$(VersionNumberMinor)</MinimumVisualStudioVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    
     <PackageCertificateKeyFile>PlayReady Sample UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
-    
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -64,19 +62,19 @@
     <Content Include="images\storelogo.scale-100.png" />
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
+    <Content Include="js\player.js" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
     <Content Include="WinJS\fonts\Symbols.ttf" />
     <Content Include="WinJS\js\en-US\ui.strings.js" />
     <Content Include="WinJS\js\WinJS.js" />
     <Content Include="WinJS\js\WinJS.intellisense.js" />
-    <Content Include="WinJS\js\WinJS.intellisense-setup.js" />   
-    
+    <Content Include="WinJS\js\WinJS.intellisense-setup.js" />
     <None Include="PlayReady Sample UWP_TemporaryKey.pfx" />
   </ItemGroup>
-  <ItemGroup> 
+  <ItemGroup>
     <SDKReference Include="Microsoft.VCLibs, Version=14.0" />
-    <SDKReference Include="Universal Smooth Streaming Client SDK, Version=1.0" />  
+    <SDKReference Include="Universal Smooth Streaming Client SDK, Version=1.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below then uncomment
