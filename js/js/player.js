@@ -28,7 +28,10 @@ initialiseMediaProtectionManager = function (video) {
 onServiceRequested = function (serviceRequest) {
     var completionNotifier = serviceRequest.completion;
 
-    serviceRequest.request.uri = Windows.Foundation.Uri(licenseUrl);
+    //TODO: retrieve service request type from Microsoft.Media.Protection.PlayReady
+    if (serviceRequest.request.type !== "c6b344bd-6017-4199-8474-694ac3ec0b3f") {
+        serviceRequest.request.uri = Windows.Foundation.Uri(licenseUrl);
+    }
 
     serviceRequest.request.beginServiceRequest().then(function () {
         completionNotifier.complete(true);
