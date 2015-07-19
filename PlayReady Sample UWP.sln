@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "PlayReady Sample UWP", "PlayReady Sample UWP.jsproj", "{AD2D9EB6-5792-456B-B332-D308ED018A37}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "PlayReady Sample UWP js", "js\PlayReady Sample UWP js.jsproj", "{AD2D9EB6-5792-456B-B332-D308ED018A37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayReady Sample UWP", "cs\PlayReady Sample UWP.csproj", "{54913979-1DD7-4329-81C0-F1015ED587B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,26 @@ Global
 		{AD2D9EB6-5792-456B-B332-D308ED018A37}.Release|x86.ActiveCfg = Release|x86
 		{AD2D9EB6-5792-456B-B332-D308ED018A37}.Release|x86.Build.0 = Release|x86
 		{AD2D9EB6-5792-456B-B332-D308ED018A37}.Release|x86.Deploy.0 = Release|x86
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Debug|ARM.ActiveCfg = Debug|ARM
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Debug|ARM.Build.0 = Debug|ARM
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Debug|ARM.Deploy.0 = Debug|ARM
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Debug|x64.ActiveCfg = Debug|x64
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Debug|x64.Build.0 = Debug|x64
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Debug|x64.Deploy.0 = Debug|x64
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Debug|x86.ActiveCfg = Debug|x86
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Debug|x86.Build.0 = Debug|x86
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Debug|x86.Deploy.0 = Debug|x86
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Release|Any CPU.ActiveCfg = Release|x86
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Release|ARM.ActiveCfg = Release|ARM
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Release|ARM.Build.0 = Release|ARM
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Release|ARM.Deploy.0 = Release|ARM
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Release|x64.ActiveCfg = Release|x64
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Release|x64.Build.0 = Release|x64
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Release|x64.Deploy.0 = Release|x64
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Release|x86.ActiveCfg = Release|x86
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Release|x86.Build.0 = Release|x86
+		{54913979-1DD7-4329-81C0-F1015ED587B0}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
