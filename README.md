@@ -4,3 +4,6 @@ Sample requires "Microsoft Universal Smooth Streaming Client SDK" https://visual
 Useful links:
 - https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn705883.aspx
 - https://code.msdn.microsoft.com/PlayReady-sample-for-bb3065e7 (Windows 8.1 samples)
+
+Samples use hardware DRM (some content is not supported using hardware DRM). More details about hadware DRM are available here:
+- https://msdn.microsoft.com/en-us/library/windows/apps/xaml/mt131554.aspx
