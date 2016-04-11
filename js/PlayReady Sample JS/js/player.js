@@ -49,6 +49,6 @@ function initialiseMediaExtensionManager() {
     var plugins = new Windows.Media.MediaExtensionManager();
     plugins.registerByteStreamHandler("Microsoft.Media.AdaptiveStreaming.SmoothByteStreamHandler", ".ism", "text/xml");
     plugins.registerByteStreamHandler("Microsoft.Media.AdaptiveStreaming.SmoothByteStreamHandler", ".ism", "application/vnd.ms-sstr+xml");
-    plugins.registerByteStreamHandler("Microsoft.Media.Protection.PlayReady.PlayReadyByteStreamHandler", ".pyv", null);
-    plugins.registerByteStreamHandler("Microsoft.Media.Protection.PlayReady.PlayReadyByteStreamHandler", ".pya", null);
+    plugins.registerByteStreamHandler("Windows.Media.Protection.PlayReady.PlayReadyByteStreamHandler", ".pyv", null);
+    plugins.registerByteStreamHandler("Windows.Media.Protection.PlayReady.PlayReadyByteStreamHandler", ".pya", null);
 }

@@ -32,8 +32,8 @@ namespace PlayReady_Sample_CS
             var plugins = new MediaExtensionManager();
             plugins.RegisterByteStreamHandler("Microsoft.Media.AdaptiveStreaming.SmoothByteStreamHandler", ".ism", "text/xml");
             plugins.RegisterByteStreamHandler("Microsoft.Media.AdaptiveStreaming.SmoothByteStreamHandler", ".ism", "application/vnd.ms-sstr+xml");
-            plugins.RegisterByteStreamHandler("Microsoft.Media.Protection.PlayReady.PlayReadyByteStreamHandler", ".pyv", "");
-            plugins.RegisterByteStreamHandler("Microsoft.Media.Protection.PlayReady.PlayReadyByteStreamHandler", ".pya", "");
+            plugins.RegisterByteStreamHandler("Windows.Media.Protection.PlayReady.PlayReadyByteStreamHandler", ".pyv", "");
+            plugins.RegisterByteStreamHandler("Windows.Media.Protection.PlayReady.PlayReadyByteStreamHandler", ".pya", "");
         }
 
         private void _initialiseMediaProtectionManager(MediaElement mediaElement)
