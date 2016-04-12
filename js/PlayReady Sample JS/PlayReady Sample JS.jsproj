@@ -70,12 +70,6 @@
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
     <Content Include="js\player.js" />
-    <Content Include="WinJS\css\ui-dark.css" />
-    <Content Include="WinJS\css\ui-light.css" />
-    <Content Include="WinJS\fonts\Symbols.ttf" />
-    <Content Include="WinJS\js\en-US\ui.strings.js" />
-    <Content Include="WinJS\js\base.js" />
-    <Content Include="WinJS\js\ui.js" />
     <None Include="PlayReady Sample JS_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
