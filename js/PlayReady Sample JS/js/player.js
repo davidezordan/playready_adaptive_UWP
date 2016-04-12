@@ -1,17 +1,22 @@
 ﻿var mediaFileName = "http://playready.directtaps.net/smoothstreaming/TTLSS720VC1PR/To_The_Limit_720.ism/Manifest",
+    mediaFileNameClear = "http://mediadl.microsoft.com/mediadl/iisnet/smoothmedia/Experience/BigBuckBunny_720p.ism/Manifest",
     licenseUrl = "http://playready.directtaps.net/win/rightsmanager.asmx";
 
 startPlayer = function () {
+    var isSoftwareProtectionLayerEnabled = 1;
+
     initialiseMediaExtensionManager();
 
-    initialiseMediaProtectionManager(videoElement);
+    initialiseSoftwareProtectionLayer(isSoftwareProtectionLayerEnabled);
+
+    initialiseMediaProtectionManager(videoElement, isSoftwareProtectionLayerEnabled);
 
     videoElement.addEventListener("error", onError, false);
 
     videoElement.src = mediaFileName;
 }
 
-initialiseMediaProtectionManager = function (video) {
+initialiseMediaProtectionManager = function (video, isSoftwareProtectionLayerEnabled) {
     var mediaProtectionManager = new Windows.Media.Protection.MediaProtectionManager();
     mediaProtectionManager.properties["Windows.Media.Protection.MediaProtectionContainerGuid"] = "{9A04F079-9840-4286-AB92-E65BE0885F95}"; // Setup the container GUID for CFF
 
@@ -19,10 +24,17 @@ initialiseMediaProtectionManager = function (video) {
     cpsystems["{F4637010-03C3-42CD-B932-B48ADF3A6A54}"] = "Windows.Media.Protection.PlayReady.PlayReadyWinRTTrustedInput"; // PlayReady
     mediaProtectionManager.properties["Windows.Media.Protection.MediaProtectionSystemIdMapping"] = cpsystems;
     mediaProtectionManager.properties["Windows.Media.Protection.MediaProtectionSystemId"] = '{F4637010-03C3-42CD-B932-B48ADF3A6A54}';
+    mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectionLayer"] = isSoftwareProtectionLayerEnabled;
 
     mediaProtectionManager.addEventListener("servicerequested", onServiceRequested, false);
 
     video.msSetMediaProtectionManager(mediaProtectionManager);
+}
+
+initialiseSoftwareProtectionLayer = function (isSoftwareProtectionLayerEnabled) {
+    var applicationData = Windows.Storage.ApplicationData.current;
+    var localSettings = applicationData.localSettings.createContainer("PlayReady", Windows.Storage.ApplicationDataCreateDisposition.always);
+    localSettings.values["SoftwareOverride"] = isSoftwareProtectionLayerEnabled;
 }
 
 onServiceRequested = function (serviceRequest) {
